@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha Contas</title>
+<style>
+  :root {
+    --paper0:#FBFAF8; --paper1:#FFFFFF; --paper2:#F2F0EC;
+    --ink1:#14181D; --ink2:#4A5460; --ink25:#646E7A;
+    --line1:#E3E0DA; --brand600:#0F5C55; --brand700:#0A4741;
+    --warn600:#9A5B08; --warn100:#FBEFD9; --neg600:#A32C24; --pos600:#15703C;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper0:#0E1114; --paper1:#161A1F; --paper2:#12161A;
+      --ink1:#EEF1F3; --ink2:#A9B3BD; --ink25:#8A939C;
+      --line1:#262C33; --brand600:#4FB3A5; --brand700:#9FD3CA;
+      --warn600:#E0A44A; --warn100:#33260F; --neg600:#F08379; --pos600:#5CC184;
+    }
+  }
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 2rem 1.25rem 6rem;
+  background: var(--paper0); color: var(--ink1);
+  font: 16px/1.65 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+main { max-width: 46rem; margin: 0 auto; }
+h1 { font-size: 2rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 .5rem; }
+h2 { font-size: 1.4rem; margin: 3rem 0 .75rem; padding-top: 1rem; border-top: 1px solid var(--line1); }
+h3 { font-size: 1.1rem; margin: 2rem 0 .5rem; color: var(--brand700); }
+h4 { font-size: 1rem; margin: 1.5rem 0 .5rem; }
+p { margin: 0 0 1rem; }
+strong { font-weight: 600; }
+code { font: .875em/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--paper2); padding: .1em .35em; border-radius: 4px; }
+ul, ol { margin: 0 0 1rem; padding-left: 1.25rem; }
+li { margin: .35rem 0; }
+table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: .95rem; }
+th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--line1); vertical-align: top; }
+th { font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink25); }
+hr { border: 0; border-top: 1px solid var(--line1); margin: 2.5rem 0; }
+aside { margin: 1.5rem 0; padding: 1rem 1.25rem; border-left: 3px solid var(--brand600); background: var(--paper2); border-radius: 0 8px 8px 0; }
+aside.atencao { border-left-color: var(--warn600); background: var(--warn100); }
+aside p { margin: 0; }
+nav.indice ol { list-style: none; padding: 0; }
+nav.indice a, .idiomas a { color: var(--brand700); }
+.idiomas { margin: 0 0 1.5rem; font-size: .9rem; color: var(--ink25); }
+.idiomas a + a::before { content: " · "; color: var(--ink25); }
+</style>
+</head>
+<body>
+<main>
+<p class="idiomas">Idioma: <a href="../pt/" hreflang="pt">Português</a><a href="../en/" hreflang="en">English</a><strong>Español</strong></p>
+<h1>Minha Contas</h1>
+<nav class="indice" aria-label="Índice"><h2>Índice</h2><ol><li><a href="#c01">1. Primeros pasos</a></li><li><a href="#c02">2. La Línea de saldo y la pregunta "¿llego a fin de mes?"</a></li><li><a href="#c03">3. Movimientos</a></li><li><a href="#c04">4. Series y pagos en cuotas</a></li><li><a href="#c05">5. Cuentas y tarjetas</a></li><li><a href="#c06">6. Comprobantes</a></li><li><a href="#c07">7. Personas, préstamos y mesadas</a></li><li><a href="#c08">8. Flujo del período</a></li><li><a href="#c09">9. Copia de seguridad y restauración</a></li><li><a href="#c10">10. Privacidad</a></li><li><a href="#c11">11. Preguntas frecuentes</a></li></ol></nav>
+<section><h2 id="c01">1. Primeros pasos</h2><p>Minha Contas es una aplicación de finanzas personales que funciona por completo sin internet y sin cuenta. Fue hecha para responder una pregunta: <strong>¿llego a fin de mes?</strong> Este manual explica cómo usar cada parte, en el orden en que probablemente la necesitarás.</p>
+<p>La primera vez que abres Minha Contas, ofrece dos opciones:</p>
+<ul><li><strong>Empezar desde cero.</strong> Registras tus cuentas y tus movimientos poco a poco.</li><li><strong>Restaurar desde la copia de seguridad.</strong> Traes a este dispositivo la copia que ya guardaste en Google Sheets. Mira el capítulo <strong>Copia de seguridad y restauración</strong>.</li></ul>
+<p>Puedes cambiar el idioma en cualquier momento con el ícono de globo (🌐) de la barra superior. La aplicación está en portugués, inglés y español. En la primera apertura usa el idioma de tu dispositivo, si es uno de esos tres. Si no lo es, usa portugués. La elección que hagas con el 🌐 queda guardada.</p>
+<p>El manual también está dentro de la aplicación. Toca el <strong>?</strong> en la barra superior, a la izquierda del 🌐, en cualquier pantalla con encabezado. Se abre el índice de capítulos. Al final de cada capítulo hay <strong>anterior</strong> y <strong>próximo</strong>. La flecha de volver regresa al índice y, luego, a la pantalla de origen. El manual se abre en el idioma que estás usando y funciona sin internet.</p>
+<h3 id="c01-s1">Cómo está organizada la aplicación</h3>
+<ul><li><strong>Inicio.</strong> Es la pantalla inicial. Muestra el saldo consolidado de hoy, lo que está previsto para los próximos días y el resumen del flujo del mes.</li><li><strong>Saldo.</strong> Es la pestaña de la línea de saldo. Muestra el saldo línea por línea.</li><li><strong>Flujo.</strong> Muestra cuánto entra y cuánto sale en un período.</li><li><strong>Movimientos.</strong> Es la lista de todo lo que registraste, con filtros.</li><li><strong>Más.</strong> Abre las demás pantallas: <strong>Series recurrentes</strong>, para lo que se repite, como alquiler y cuotas; <strong>Personas y saldos</strong>, para préstamos y montos guardados para alguien; <strong>Mesadas y dependientes</strong>; <strong>Comprobantes y código QR</strong>, para los comprobantes de tus compras; <strong>Tarjetas de crédito</strong>; y <strong>Cuentas bancarias</strong>, para tus cuentas, billeteras y bancos.</li></ul>
+<p>Para registrar algo nuevo, toca <strong>+ Registrar</strong>. Este botón siempre queda al alcance del pulgar.</p></section>
+<section><h2 id="c02">2. La Línea de saldo y la pregunta "¿llego a fin de mes?"</h2><p>La Línea de saldo es una línea de tiempo vertical. Cada movimiento aparece en orden de fecha y muestra <strong>el saldo después de él</strong>. Así ves, sin sumar nada, si el dinero alcanza hasta fin de mes.</p>
+<p>La Línea de saldo se abre en el presente. El pasado aparece arriba, y el futuro, abajo. Una franja con la palabra <strong>HOY</strong> marca el punto en que estás. Cuando desplazas la pantalla, la franja de HOY queda pegada arriba.</p>
+<p>Para volver al presente después de desplazarte hacia el pasado, toca la píldora <strong>Hoy</strong>.</p>
+<h3 id="c02-s1">Qué significan los símbolos</h3>
+<ul><li><strong>✓</strong> indica un movimiento pagado.</li><li><strong>!</strong> indica un movimiento vencido que no fue pagado.</li><li><strong>~</strong> indica un monto estimado, que todavía puede cambiar.</li><li>Una línea apagada indica un pasado ya consolidado.</li><li>Una línea en tono pleno indica un futuro que todavía puedes editar.</li></ul>
+<h3 id="c02-s2">Cuando el saldo queda negativo</h3>
+<p>Si el saldo previsto pasa de positivo a negativo en algún punto, la Línea de saldo marca exactamente dónde ocurre. Si no aparece ninguna marca, el saldo no queda negativo en el horizonte que estás viendo.</p>
+<h3 id="c02-s3">Editar un movimiento desde la Línea de saldo</h3>
+<p>Toca una línea para abrir el movimiento y editarlo.</p></section>
+<section><h2 id="c03">3. Movimientos</h2><p>La pestaña <strong>Movimientos</strong> es la lista completa. Úsala cuando necesites encontrar algo específico.</p>
+<h3 id="c03-s1">Filtrar la lista</h3>
+<p>Puedes filtrar la lista por tres cosas:</p>
+<table><thead><tr><th>Filtro</th><th>Para qué sirve</th></tr></thead><tbody><tr><td><strong>Buscar</strong></td><td>Busca en la descripción o en la observación, sin distinguir acentos ni mayúsculas.</td></tr><tr><td><strong>Estado</strong></td><td>Muestra los vencidos, los previstos o los pagados.</td></tr><tr><td><strong>Cuenta</strong></td><td>Muestra una cuenta específica, o <strong>Sin cuenta</strong>, que reúne lo que todavía no se asignó a ninguna cuenta.</td></tr></tbody></table>
+<p>Con un filtro activo, el número de arriba deja de ser el <strong>saldo previsto</strong> y pasa a ser la <strong>suma de lo filtrado</strong>. Al lado aparece el conteo, por ejemplo "12 de 157 movimientos". El saldo sigue siendo el de todo. La suma filtrada sirve para verificar un recorte.</p>
+<h3 id="c03-s2">Crear un movimiento</h3>
+<p>Toca <strong>+ Registrar</strong> y elige un movimiento. Indica la descripción, el monto, la fecha y, si quieres, la cuenta. También puedes indicar la forma de pago. Si el movimiento es una compra con tarjeta, consulta el capítulo <strong>Cuentas y tarjetas</strong>.</p>
+<h3 id="c03-s3">Pagar o marcar como pagado</h3>
+<p>Marcar como pagado significa registrar que el movimiento ocurrió. Hay dos formas:</p>
+<ul><li><strong>¿Pagaste como estaba previsto, hoy?</strong> Desliza la fila hacia un lado y toca <strong>Pagado</strong>. El movimiento se marca como pagado por el monto previsto, en la fecha de hoy.</li><li><strong>¿Pagaste en otra fecha o por otro monto?</strong> Abre el movimiento y toca <strong>Marcar como pagado</strong>.</li></ul>
+<p>En la pantalla de pago, la <strong>Fecha del pago</strong> ya viene con la fecha de hoy, y el <strong>Monto pagado</strong> ya viene con el monto previsto. Ajusta lo que sea distinto, elige la cuenta si quieres, y confirma.</p>
+<p>No existe un botón de "está pagado". <strong>La fecha de pago es lo que marca el movimiento como pagado.</strong> Por eso, si deshaces el pago, el movimiento vuelve a estar previsto.</p>
+<p><strong>El monto previsto no cambia cuando pagas distinto.</strong> Si el gasto estaba previsto en R$ 92,13 y pagaste R$ 94,83, el movimiento muestra esa diferencia. Aparece en la comparación entre <strong>Proyección</strong> y <strong>Real</strong>, en el capítulo <strong>Flujo del período</strong>.</p>
+<h3 id="c03-s4">Dividir un movimiento en varias formas de pago</h3>
+<p>A veces un gasto se paga de más de una forma. Por ejemplo, una parte con tarjeta y otra con PIX. En ese caso, divide el movimiento:</p>
+<ul><li>Cada parte puede tener una cuenta, una tarjeta o quedar sin cuenta.</li><li>Un movimiento dividido tiene de 2 a 12 partes.</li><li>Todas las partes tienen la misma fecha.</li><li>Al crear, las partes deben sumar el total. La pantalla muestra cuánto falta y no deja guardar mientras la suma no cierre.</li><li>Al editar, la pantalla muestra la diferencia, pero no impide guardar.</li><li>Solo los gastos pueden dividirse.</li><li>En la lista, el movimiento dividido aparece como <strong>una sola línea</strong>, con el total. Toca esa línea para ver las partes.</li><li>Una parte pagada con tarjeta puede ser en cuotas.</li></ul>
+<p>Para eliminar una parte, eliges entre <strong>Solo esta parte</strong> y <strong>Todo el grupo</strong>. El grupo completo no se puede eliminar si alguna parte viene de un comprobante o de una serie. En ese caso, elimínala desde el propio comprobante o desde la propia serie.</p></section>
+<section><h2 id="c04">4. Series y pagos en cuotas</h2><p>Una serie es un movimiento que se repite. Usa series para alquiler, mensualidades, cuentas de luz y cuotas.</p>
+<h3 id="c04-s1">Tres tipos de serie</h3>
+<table><thead><tr><th>Tipo</th><th>Ejemplo</th><th>Cómo es el monto</th></tr></thead><tbody><tr><td><strong>Monto fijo</strong></td><td>alquiler, mensualidad</td><td>Es el mismo todos los meses.</td></tr><tr><td><strong>Monto variable</strong></td><td>luz, agua</td><td>Cambia de mes a mes. La aplicación estima el monto y lo marca con <strong>~</strong> hasta que registres el monto real.</td></tr><tr><td><strong>Pago en cuotas</strong></td><td>12 cuotas de un seguro</td><td>Tiene un número de cuotas definido.</td></tr></tbody></table>
+<h3 id="c04-s2">Ya registradas y aún no registradas</h3>
+<p>Una serie tiene dos tipos de ocurrencia:</p>
+<ul><li><strong>Ya registradas.</strong> Existen en la aplicación y puedes editarlas.</li><li><strong>Aún no registradas.</strong> Son previsiones. Cada una aparece el día 1 del mes al que pertenece, o antes, si la pagas.</li></ul>
+<h3 id="c04-s3">Finalizar no es eliminar</h3>
+<ul><li><strong>Finalizar</strong> deja de crear ocurrencias nuevas y mantiene el historial.</li><li><strong>Eliminar</strong> borra las ocurrencias. Antes de confirmar, la pantalla muestra cuántas se borrarán.</li></ul>
+<p>Si tienes dudas, finaliza. Así el historial sigue disponible.</p>
+<h3 id="c04-s4">Cuotas de una compra con tarjeta</h3>
+<p>Si la compra se hizo en cuotas con tarjeta, consulta el capítulo <strong>Cuentas y tarjetas</strong>. Ahí encontrarás cómo indicar el total y el número de cuotas.</p></section>
+<section><h2 id="c05">5. Cuentas y tarjetas</h2><h3 id="c05-s1">Cuentas</h3>
+<p>Una cuenta es el lugar donde está el dinero: un banco, una billetera, una cuenta digital. Le das el nombre que quieras, como <em>BB</em>, <em>Nubank</em> o <em>billetera</em>. La aplicación no pide tipo ni lista de bancos.</p>
+<ul><li><strong>La cuenta es opcional.</strong> Cualquier movimiento puede existir sin cuenta.</li><li><strong>Archivar</strong> saca la cuenta de las listas de elección, pero el historial se mantiene. Por eso no existe "eliminar cuenta".</li><li><strong>Sin cuenta</strong> no es una cuenta tuya. Es el lugar donde quedan los movimientos que todavía no se asignaron. No se puede renombrar ni archivar.</li><li>Una cuenta que paga una tarjeta activa no se puede archivar. Antes, cambia la cuenta de pago de la tarjeta.</li></ul>
+<h3 id="c05-s2">Tarjetas de crédito</h3>
+<p>En la pantalla de tarjetas registras cada tarjeta con:</p>
+<ul><li><strong>Nombre de la tarjeta</strong>, que no puede repetirse entre las tarjetas activas;</li><li><strong>Marca</strong>, con cinco opciones y la opción <strong>Otra</strong>;</li><li><strong>Límite</strong>, que debe ser cero o más;</li><li><strong>Día de cierre</strong>, de 1 a 31;</li><li><strong>Día de vencimiento</strong>, de 1 a 31;</li><li><strong>Cuenta de pago</strong>, obligatoria, que es de donde sale el dinero del estado de cuenta.</li></ul>
+<p>Puedes tener más de una tarjeta en la misma cuenta. La aplicación avisa, pero lo acepta.</p>
+<p>Cambiar el día de cierre o el de vencimiento vale de inmediato. Nada de lo ya registrado cambia de monto, pero el período de cada estado de cuenta pasa a calcularse con la nueva fecha.</p>
+<p>La aplicación <strong>no guarda el número de la tarjeta, el código de seguridad ni la validez</strong>. Una tarjeta archivada se puede reactivar. No existe eliminar tarjeta.</p>
+<h3 id="c05-s3">Ver estado de cuenta</h3>
+<p>En cada tarjeta, toca <strong>Ver estado</strong>. La pantalla muestra dos partes.</p>
+<ul><li><strong>Compras con la tarjeta.</strong> Son las compras hechas con la tarjeta en el ciclo del estado de cuenta, desde el día siguiente al cierre anterior hasta el cierre actual. Esta lista no muestra total.</li><li><strong>Movimientos de la cuenta.</strong> Se muestra contraída. Al abrirla, muestra los movimientos de la cuenta de pago de la tarjeta hasta el vencimiento. Aquí aparece el monto del estado de cuenta, que registras a mano cuando llega.</li></ul>
+<p>Si el estado de cuenta no tiene movimientos, la pantalla ofrece <strong>Nuevo movimiento</strong> con la cuenta ya completada.</p>
+<p><strong>La aplicación no calcula el total del estado de cuenta.</strong> No muestra límite disponible ni débito automático. El estado de cuenta es el movimiento que escribes cuando llega.</p>
+<h3 id="c05-s4">Compra con tarjeta</h3>
+<p>Al registrar una compra pagada con tarjeta de crédito, elige <strong>Pagado con: Tarjeta de crédito</strong> y luego la tarjeta. No hace falta elegir una cuenta.</p>
+<ul><li><strong>La compra no saca dinero de la cuenta ahora.</strong> Aparece en el flujo en la fecha de la compra, pero no entra en el saldo de las cuentas.</li><li><strong>El dinero sale cuando registras el estado de cuenta</strong> en la cuenta de pago de la tarjeta.</li></ul>
+<p>Esta regla evita contar el mismo dinero dos veces: la compra cuenta en el estado de cuenta, no en el saldo del día.</p>
+<p>Una compra con tarjeta siempre queda pagada en la fecha de la compra. No existe "pagar" para ella. Un movimiento al que ya marcaste como pagado solo se convierte en compra con tarjeta después de deshacer el pago.</p>
+<h3 id="c05-s5">Compra en cuotas con tarjeta</h3>
+<p>Elige el total de la compra y el número de cuotas, de 1 a 36. La aplicación divide el total en centavos. Si sobra algo, va a la primera cuota.</p>
+<p>Cada cuota cae en su estado de cuenta correspondiente. La primera va al estado de cuenta de la compra, y las siguientes, a los estados de cuenta de los meses siguientes.</p>
+<ul><li>Si cambias el día de cierre, las cuotas ya creadas <strong>no cambian de estado de cuenta</strong> solas. La pantalla de la tarjeta avisa cuántas cuotas futuras pueden cambiar.</li><li>Si una cuota ya está en un estado de cuenta cerrado, se mantiene. Al editar el total, el saldo restante se redistribuye entre las cuotas futuras.</li><li>No es posible cambiar la fecha ni la tarjeta de una compra que ya tiene cuotas en un estado de cuenta cerrado.</li></ul>
+<h3 id="c05-s6">Reembolso</h3>
+<p>Un reembolso es una compra con valor negativo. Regístralo como compra con tarjeta con el valor negativo. Aparece en <strong>Ver estado</strong> y queda fuera del saldo de las cuentas. Un reembolso no puede pagarse en cuotas.</p>
+<h3 id="c05-s7">Cambiar la forma de pago de un movimiento</h3>
+<p>Un movimiento suelto puede cambiar de cuenta a tarjeta, o al revés. En ese caso, la aplicación elimina el movimiento y crea otro en su lugar. Los movimientos ligados a un comprobante o a una serie no cambian de forma. La pantalla explica el motivo.</p></section>
+<section><h2 id="c06">6. Comprobantes</h2><p>Los comprobantes son la prueba de cada compra. La aplicación registra el valor, la fecha, el establecimiento, la forma de pago y, cuando es posible, los productos.</p>
+<h3 id="c06-s1">Cómo registrar un comprobante</h3>
+<p>Abre <strong>Comprobantes y código QR</strong> en el menú <strong>Más</strong> y elige cómo registrarlo:</p>
+<ul><li><strong>Leer código QR.</strong> Apunta la cámara al código QR del cupón. Funciona solo para <strong>NFC-e</strong>, que es el comprobante del consumidor. La lectura la hace el dispositivo, y el registro funciona sin internet.</li><li><strong>Escribir clave.</strong> Escribe los 44 números de la clave de acceso. Vale para <strong>NFC-e</strong> y para <strong>NF-e modelo 55</strong>, que es el comprobante completo, impreso como DANFE.</li></ul>
+<p>Al indicar la clave, la aplicación completa sola la UF, el emisor, el modelo, la serie y el número. Estos campos no se pueden editar, porque vienen de la propia clave.</p>
+<p>Si el dígito verificador de la clave no coincide, la aplicación rechaza la clave y dice el motivo. Si el comprobante ya está registrado, la aplicación muestra qué va a cambiar antes de cambiarlo.</p>
+<p>Después de leer el comprobante, indicas la fecha, el monto y la forma de pago. Si el código QR corresponde a un comprobante emitido en contingencia, el valor y la fecha ya vienen completados.</p>
+<h3 id="c06-s2">Registrar un comprobante tras otro</h3>
+<p>Cuando terminas de registrar un comprobante, la pantalla ofrece <strong>Registrar otro comprobante</strong>. Vuelve por el mismo camino: quien leyó el código QR vuelve a la cámara, y quien escribió la clave vuelve al formulario. Este botón solo aparece justo después de un registro. Para revisar un comprobante antiguo, ábrelo desde la lista.</p>
+<h3 id="c06-s3">Formas de pago y qué hace cada una</h3>
+<table><thead><tr><th>Forma de pago</th><th>Qué pasa</th></tr></thead><tbody><tr><td>Efectivo, débito, PIX o transferencia</td><td>Se convierte en un gasto <strong>pagado</strong> en la fecha de la compra.</td></tr><tr><td>Boleto</td><td>Se convierte en un gasto <strong>previsto</strong> en el vencimiento del boleto.</td></tr><tr><td>A plazo</td><td><strong>No crea movimiento.</strong> Cuentan las cuotas de la serie.</td></tr><tr><td>Tarjeta de crédito</td><td><strong>No crea movimiento.</strong> El estado de cuenta de la tarjeta es el que cuenta la compra.</td></tr></tbody></table>
+<p>Un comprobante a plazo abre la pantalla de serie ya completada con la descripción, el día del vencimiento y la cuenta. Indicas el número de cuotas y el monto de cada una. La pantalla muestra la suma de las cuotas junto al total del comprobante. Si no coinciden, la aplicación avisa, pero no impide guardar.</p>
+<p>Si sales antes de crear la serie, el comprobante queda registrado. Su pantalla muestra <strong>Registrar la serie de cuotas</strong>. Cuando la serie existe, el botón desaparece y la pantalla indica que ya está registrada. Así no creas dos series para la misma compra.</p>
+<p>Un comprobante puede tener de 1 a 12 pagos. Cada pago tiene su propia forma de pago. Si hay más de un pago a plazo o boleto, las series se abren una después de otra al guardar, con el aviso <strong>Serie del pago N de M</strong>. Si el comprobante se paga con tarjeta, cada pago elige su propia tarjeta.</p>
+<h3 id="c06-s4">De qué cuenta salió el dinero</h3>
+<p>Al registrar, la aplicación pregunta la cuenta. No la pregunta en efectivo, porque el efectivo no sale de un banco, ni con tarjeta de crédito, porque la tarjeta no mueve el saldo ahora. La cuenta es opcional. Si la dejas en blanco, el movimiento va a <strong>Sin cuenta</strong>.</p>
+<p>La pantalla del comprobante siempre informa el efecto que tuvo en el saldo, incluso cuando no tuvo ninguno. Un comprobante con tarjeta de crédito, por ejemplo, no mueve el saldo de hoy. Un comprobante pagado con débito aparece en la Línea de saldo como cualquier gasto.</p>
+<h3 id="c06-s5">Productos del comprobante</h3>
+<p>En la pantalla del comprobante, toca <strong>Buscar en el sitio de SEFAZ</strong> para intentar copiar la lista de productos del sitio de la Secretaría de Hacienda. A veces el sitio pide una verificación. En ese caso, resuelves la verificación y la aplicación copia los productos. Si no hay un camino automático, toca <strong>Agregar productos a mano</strong>.</p>
+<p>Los productos son <strong>detalle</strong>. Nunca entran en el saldo. El valor que vale es el total del comprobante. Si la suma de los productos no coincide con el total, por descuento, flete o impuestos, la aplicación avisa y no corrige nada.</p>
+<h3 id="c06-s6">Catálogo de artículos</h3>
+<p>Cada producto puede registrarse en el catálogo. El catálogo es <strong>por comercio</strong>, y el comercio es el emisor del comprobante. Cada artículo tiene:</p>
+<ul><li><strong>descripción</strong>, obligatoria;</li><li><strong>marca</strong>, opcional;</li><li><strong>código de barras</strong>, opcional;</li><li><strong>código del artículo</strong>, opcional. Debe ser único dentro del mismo comercio.</li></ul></section>
+<section><h2 id="c07">7. Personas, préstamos y mesadas</h2><p>La pantalla <strong>Personas y saldos</strong>, en el menú <strong>Más</strong>, guarda lo que prestaste y lo que guardas para alguien.</p>
+<h3 id="c07-s1">Préstamos</h3>
+<p>Usa un préstamo para registrar el dinero que prestaste y esperas recibir de vuelta. La aplicación sigue la corrección por intereses. La tasa, el método (simple o compuesto) y la base de cálculo se eligen al registrar el préstamo.</p>
+<p>Para ver cuánto te debe alguien hoy, abre la persona. El valor ya viene corregido hasta la fecha de hoy. Registra cada pago que esa persona haga.</p>
+<p>El cobro previsto de un préstamo solo entra en el flujo si decides proyectarlo. Por defecto, no entra.</p>
+<h3 id="c07-s2">Monto guardado</h3>
+<p>Un monto guardado es dinero que está en tu cuenta, pero pertenece a otra persona, como la mesada de un hijo. Aparece separado del disponible. Así no cuentas con dinero que no es tuyo.</p>
+<h3 id="c07-s3">Mesadas</h3>
+<p>Las mesadas tienen pantalla propia, <strong>Mesadas y dependientes</strong>, en el menú <strong>Más</strong>. Registras la mesada con el monto y el día del crédito. La aplicación crea el crédito automáticamente todos los meses. También puedes reajustar el monto o finalizar la mesada. Finalizar no borra el historial.</p></section>
+<section><h2 id="c08">8. Flujo del período</h2><p>La pestaña <strong>Flujo</strong> responde cuánto entra y cuánto sale en un período.</p>
+<p>Tiene cuatro filas, en dos columnas:</p>
+<ul><li><strong>Proyección</strong> es lo que esperas: todo movimiento del período, pagado o no.</li><li><strong>Real</strong> es lo que de hecho ocurrió: solo los movimientos pagados, por el monto pagado.</li></ul>
+<p>Usa las flechas para avanzar mes a mes. Los botones <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong> y <strong>12</strong> abren el período para ese número de meses seguidos. El título muestra el período por extenso, como <em>agosto de 2026</em> o <em>agosto a octubre de 2026</em>. Cuando el período pasa de un año a otro, el título muestra los dos años.</p>
+<p>Más abajo, el <strong>saldo por cuenta bancaria</strong> muestra cuánto hay en cada cuenta. Los movimientos sin cuenta aparecen al final, destacados. Ese total es dinero tuyo que la aplicación todavía no sabe en qué cuenta está. No se oculta, para que la suma de las cuentas no parezca errada.</p>
+<h3 id="c08-s1">Preguntas que responde el Flujo</h3>
+<ul><li>¿Cuánto entra y sale en tres meses? Toca <strong>3</strong>.</li><li>¿Cuánto tengo en el BB? Mira el saldo por cuenta.</li></ul></section>
+<section><h2 id="c09">9. Copia de seguridad y restauración</h2><p>La copia de seguridad es opcional. La aplicación funciona completa sin ella.</p>
+<h3 id="c09-s1">Activar la copia de seguridad en Google Sheets</h3>
+<p>Al conectar tu cuenta de Google, la aplicación crea una hoja de cálculo en tu cuenta. Solo puede acceder a esa hoja de cálculo. No accede a otros archivos, fotos, correos ni contactos.</p>
+<p>La copia incluye todo: cuentas, movimientos, series, personas, préstamos, mesadas, comprobantes, la forma de pago de cada comprobante, los productos ya consultados y las tarjetas. El comprobante pagado con tarjeta sigue sin generar movimiento en la copia, porque el estado de cuenta es el que cuenta la compra.</p>
+<p>La barra superior muestra el estado real de la copia: si hay elementos esperando envío, o cuándo fue la última sincronización. La sincronización se ejecuta en segundo plano cuando Android lo permite. La aplicación pide unos 15 minutos, pero el sistema puede postergarla, y sin red espera. No hay horario fijo. Los cambios quedan guardados en el dispositivo hasta que se envían.</p>
+<p>Para guardar una copia fuera del dispositivo, abre el menú <strong>Más</strong>, en la sección <strong>Seguridad y datos sin conexión</strong>, y toca <strong>Exportar copia de seguridad</strong>. La aplicación genera un archivo con la base de datos del dispositivo.</p>
+<h3 id="c09-s2">Restaurar la copia</h3>
+<p>Usa <strong>Restaurar desde la copia de seguridad</strong> para traer la copia a este dispositivo. Puede ser un dispositivo nuevo o el mismo, en cualquier momento.</p>
+<ol><li>Conecta tu cuenta de Google.</li><li>Mira la <strong>vista previa</strong>. Muestra la fecha de la copia, el período cubierto y la cantidad de cada tipo de registro.</li><li>Confirma con <strong>Confirmar restauración</strong>.</li></ol>
+<p>La vista previa también avisa cuando la copia tiene más registros que el dispositivo. Informa cuántos registros de cada tipo vienen de más y cuántas duplicidades se descartaron.</p>
+<p>La base actual solo se reemplaza después de que la copia se lee y se verifica completa. Si la restauración falla, nada cambia, y el mensaje lo dice.</p>
+<p>Si hay cambios en este dispositivo que todavía no se enviaron a la copia, la vista previa avisa y los enumera. Puedes elegir <strong>Enviar ahora y luego restaurar</strong>, que es el camino recomendado, o <strong>Restaurar de todos modos</strong>. En este segundo caso, esos cambios se pierden.</p>
+<p>Una copia hecha con una versión anterior de la aplicación también se puede restaurar. Lo que tiene vuelve. Lo que no tiene, por ser de una versión anterior, no se trata como error.</p>
+<h3 id="c09-s3">Si cambia el bloqueo de pantalla</h3>
+<p>Al cambiar o quitar el PIN o la contraseña del dispositivo, se borra la clave que mantiene la conexión con tu cuenta de Google. <strong>Solo se pierde la conexión.</strong> Tus movimientos siguen en el dispositivo. La aplicación avisa y ofrece volver a conectar.</p></section>
+<section><h2 id="c10">10. Privacidad</h2><h3 id="c10-s1">Qué queda en el dispositivo</h3>
+<ul><li>Todos tus registros quedan en una base de datos en el dispositivo. Solo Minha Contas accede a esa base.</li><li>La aplicación funciona sin internet y no exige cuenta.</li><li>El desarrollador no recibe ni guarda tus datos.</li></ul>
+<h3 id="c10-s2">Qué sale del dispositivo</h3>
+<p>La aplicación solo se conecta a internet en estas situaciones:</p>
+<ul><li><strong>Google Sheets.</strong> Solo si conectas tu cuenta de Google. En ese caso, la copia va a la hoja de cálculo de tu propia cuenta.</li><li><strong>BrasilAPI.</strong> Cuando registras un comprobante con CNPJ del emisor y sin nombre del emisor. La aplicación envía solo el CNPJ, que es un dato público de empresa, para buscar el nombre. Si la consulta falla, el comprobante se guarda sin nombre.</li><li><strong>Sitio de SEFAZ.</strong> Solo cuando tocas <strong>Buscar en el sitio de SEFAZ</strong>. El sitio se abre en una ventana privada dentro de la aplicación, y lo que guarde se descarta al cerrarla. Si tocas <strong>Navegador</strong>, la dirección se abre en el navegador del dispositivo, y entonces valen las reglas de ese navegador.</li></ul>
+<p>Como en cualquier conexión, estos servicios pueden ver la dirección IP del dispositivo.</p>
+<h3 id="c10-s3">Desconectar y eliminar los datos</h3>
+<p>Desconectar la cuenta de Google no borra la hoja de cálculo. Sigue en tu cuenta de Google. Los datos del dispositivo desaparecen al desinstalar la aplicación o al limpiar sus datos en los ajustes de Android. Si quieres recuperarlos, restaura la hoja de cálculo después.</p>
+<h3 id="c10-s4">Permisos</h3>
+<ul><li><strong>Cámara.</strong> Sirve solo para leer el código QR del cupón. La aplicación no toma fotos y no envía imágenes.</li><li><strong>Internet.</strong> Se usa solo en las situaciones de arriba.</li><li><strong>Micrófono y superposición de pantalla.</strong> La aplicación no los pide ni los usa.</li></ul></section>
+<section><h2 id="c11">11. Preguntas frecuentes</h2><h3 id="c11-s1">¿Necesito cuenta para usarla?</h3>
+<p>No. La aplicación funciona sin cuenta. La cuenta de Google es solo para la copia de seguridad, y es opcional.</p>
+<h3 id="c11-s2">¿Puedo usarla sin internet?</h3>
+<p>Sí. Registrar movimientos, leer la clave o el código QR, y consultar la Línea de saldo y el Flujo funcionan sin internet. Los productos del comprobante solo se buscan cuando hay conexión.</p>
+<h3 id="c11-s3">¿Un comprobante con tarjeta aparece en mi saldo?</h3>
+<p>No. La compra cuenta en el estado de cuenta, y el estado de cuenta es el movimiento que registras cuando llega. Así el mismo dinero no aparece dos veces.</p>
+<h3 id="c11-s4">¿Por qué el comprobante dice "sin forma de pago"?</h3>
+<p>Significa que el comprobante vino de una copia antigua, que no registraba cómo se pagó. Abre el comprobante e indica la forma de pago para que entre en el flujo.</p>
+<h3 id="c11-s5">¿Por qué la suma de las cuotas no coincide con el total del comprobante?</h3>
+<p>La aplicación avisa, pero no impide guardar. Revisa los montos de las cuotas y guarda, o ajusta la serie.</p>
+<h3 id="c11-s6">Me equivoqué en el monto de un movimiento pagado. ¿Cómo lo corrijo?</h3>
+<p>Abre el movimiento y toca <strong>Cambiar el pago</strong>, o edita la fecha y el monto pagados. Si deshaces el pago, el movimiento vuelve a estar previsto. La aplicación siempre muestra qué va a cambiar antes de confirmar.</p>
+<h3 id="c11-s7">¿Puedo eliminar una cuenta?</h3>
+<p>No. Archívala. Sale de las listas de elección, y el historial se mantiene.</p>
+<h3 id="c11-s8">¿Puedo eliminar una tarjeta?</h3>
+<p>No. Archívala. Se puede reactivar después.</p>
+<h3 id="c11-s9">¿Por qué desapareció el botón de serie del comprobante?</h3>
+<p>Porque la serie ya se creó. La pantalla del comprobante indica que está registrada. Así no creas dos series para la misma compra.</p>
+<h3 id="c11-s10">Cambié el día de cierre de la tarjeta. ¿Las cuotas cambian de estado de cuenta?</h3>
+<p>Las cuotas que ya existen no cambian de estado de cuenta. La pantalla de la tarjeta avisa cuántas cuotas futuras pueden cambiar.</p></section>
+</main>
+</body>
+</html>
