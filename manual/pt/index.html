@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha Contas</title>
+<style>
+  :root {
+    --paper0:#FBFAF8; --paper1:#FFFFFF; --paper2:#F2F0EC;
+    --ink1:#14181D; --ink2:#4A5460; --ink25:#646E7A;
+    --line1:#E3E0DA; --brand600:#0F5C55; --brand700:#0A4741;
+    --warn600:#9A5B08; --warn100:#FBEFD9; --neg600:#A32C24; --pos600:#15703C;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper0:#0E1114; --paper1:#161A1F; --paper2:#12161A;
+      --ink1:#EEF1F3; --ink2:#A9B3BD; --ink25:#8A939C;
+      --line1:#262C33; --brand600:#4FB3A5; --brand700:#9FD3CA;
+      --warn600:#E0A44A; --warn100:#33260F; --neg600:#F08379; --pos600:#5CC184;
+    }
+  }
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 2rem 1.25rem 6rem;
+  background: var(--paper0); color: var(--ink1);
+  font: 16px/1.65 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+main { max-width: 46rem; margin: 0 auto; }
+h1 { font-size: 2rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 .5rem; }
+h2 { font-size: 1.4rem; margin: 3rem 0 .75rem; padding-top: 1rem; border-top: 1px solid var(--line1); }
+h3 { font-size: 1.1rem; margin: 2rem 0 .5rem; color: var(--brand700); }
+h4 { font-size: 1rem; margin: 1.5rem 0 .5rem; }
+p { margin: 0 0 1rem; }
+strong { font-weight: 600; }
+code { font: .875em/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--paper2); padding: .1em .35em; border-radius: 4px; }
+ul, ol { margin: 0 0 1rem; padding-left: 1.25rem; }
+li { margin: .35rem 0; }
+table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: .95rem; }
+th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--line1); vertical-align: top; }
+th { font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink25); }
+hr { border: 0; border-top: 1px solid var(--line1); margin: 2.5rem 0; }
+aside { margin: 1.5rem 0; padding: 1rem 1.25rem; border-left: 3px solid var(--brand600); background: var(--paper2); border-radius: 0 8px 8px 0; }
+aside.atencao { border-left-color: var(--warn600); background: var(--warn100); }
+aside p { margin: 0; }
+nav.indice ol { list-style: none; padding: 0; }
+nav.indice a, .idiomas a { color: var(--brand700); }
+.idiomas { margin: 0 0 1.5rem; font-size: .9rem; color: var(--ink25); }
+.idiomas a + a::before { content: " · "; color: var(--ink25); }
+</style>
+</head>
+<body>
+<main>
+<p class="idiomas">Idioma: <strong>Português</strong><a href="../en/" hreflang="en">English</a><a href="../es/" hreflang="es">Español</a></p>
+<h1>Minha Contas</h1>
+<nav class="indice" aria-label="Índice"><h2>Índice</h2><ol><li><a href="#c01">1. Primeiros passos</a></li><li><a href="#c02">2. A Régua e a pergunta "vou virar o mês?"</a></li><li><a href="#c03">3. Lançamentos</a></li><li><a href="#c04">4. Séries e parcelamentos</a></li><li><a href="#c05">5. Contas e cartões</a></li><li><a href="#c06">6. Notas fiscais</a></li><li><a href="#c07">7. Pessoas, empréstimos e mesadas</a></li><li><a href="#c08">8. Fluxo do período</a></li><li><a href="#c09">9. Backup e restauração</a></li><li><a href="#c10">10. Privacidade</a></li><li><a href="#c11">11. Perguntas frequentes</a></li></ol></nav>
+<section><h2 id="c01">1. Primeiros passos</h2><p>Minha Contas é um aplicativo de finanças pessoais que funciona inteiro sem internet e sem conta. Ele foi feito para responder uma pergunta: <strong>eu vou virar o mês?</strong> Este manual explica como usar cada parte dele, na ordem em que você provavelmente vai precisar.</p>
+<p>Na primeira vez que você abre o Minha Contas, ele oferece duas opções:</p>
+<ul><li><strong>Começar do zero.</strong> Você cadastra suas contas e seus lançamentos aos poucos.</li><li><strong>Restaurar de backup.</strong> Você traz para este aparelho a cópia que já guardou no Google Sheets. Veja o capítulo <strong>Backup e restauração</strong>.</li></ul>
+<p>Você pode mudar o idioma a qualquer momento pelo ícone de globo (🌐) na barra do topo. O aplicativo está em português, inglês e espanhol. Na primeira abertura ele usa o idioma do seu aparelho, se for um desses três. Se não for, usa o português. A escolha que você fizer no 🌐 fica salva.</p>
+<p>O manual também fica dentro do aplicativo. Toque no <strong>?</strong> na barra do topo, à esquerda do 🌐, em qualquer tela com cabeçalho. Ele abre o índice dos capítulos. No fim de cada capítulo há <strong>anterior</strong> e <strong>próximo</strong>. A seta de voltar retorna ao índice e, depois, à tela de origem. O manual abre no idioma que você está usando e funciona sem internet.</p>
+<h3 id="c01-s1">Como o aplicativo está organizado</h3>
+<ul><li><strong>Início.</strong> É a tela inicial. Mostra o saldo consolidado de hoje, o que está previsto para os próximos dias e o resumo do fluxo do mês.</li><li><strong>Régua.</strong> Mostra o saldo linha a linha.</li><li><strong>Fluxo.</strong> Mostra quanto entra e sai em um período.</li><li><strong>Lançamentos.</strong> É a lista de tudo o que você registrou, com filtros.</li><li><strong>Mais.</strong> Abre as demais telas: <strong>Séries Recorrentes</strong>, para o que se repete, como aluguel e parcelas; <strong>Pessoas &amp; Livro-Razão</strong>, para empréstimos e valores guardados para alguém; <strong>Mesadas &amp; Dependentes</strong>; <strong>Notas Fiscais &amp; QR Code</strong>, para as notas fiscais de compras; <strong>Cartões de Crédito</strong>; e <strong>Contas Bancárias</strong>, para suas contas, carteiras e bancos.</li></ul>
+<p>Para registrar algo novo, toque em <strong>+ Registrar</strong>. Esse botão fica sempre ao alcance do polegar.</p></section>
+<section><h2 id="c02">2. A Régua e a pergunta "vou virar o mês?"</h2><p>A Régua é uma linha do tempo vertical. Cada lançamento aparece em ordem de data e mostra <strong>o saldo depois dele</strong>. Assim você vê, sem somar nada, se o dinheiro aguenta até o fim do mês.</p>
+<p>A Régua abre no presente. O passado aparece acima, e o futuro, abaixo. Uma faixa com a palavra <strong>HOJE</strong> marca o ponto em que você está. Quando você rola a tela, a faixa de HOJE fica grudada no topo.</p>
+<p>Para voltar ao presente depois de rolar para o passado, toque na pílula <strong>Hoje</strong>.</p>
+<h3 id="c02-s1">O que os símbolos significam</h3>
+<ul><li><strong>✓</strong> indica um lançamento pago.</li><li><strong>!</strong> indica um lançamento que venceu e não foi pago.</li><li><strong>~</strong> indica um valor estimado, que ainda pode mudar.</li><li>Uma linha apagada indica um passado já consolidado.</li><li>Uma linha em tom pleno indica um futuro que você ainda pode editar.</li></ul>
+<h3 id="c02-s2">Quando o saldo fica negativo</h3>
+<p>Se o saldo previsto passar de positivo para negativo em algum ponto, a Régua marca exatamente onde isso acontece. Se nenhuma marca aparece, o saldo não fica negativo no horizonte que você está vendo.</p>
+<h3 id="c02-s3">Editar um lançamento pela Régua</h3>
+<p>Toque numa linha para abrir o lançamento e editá-lo.</p></section>
+<section><h2 id="c03">3. Lançamentos</h2><p>A aba <strong>Lançamentos</strong> é a lista completa. Use-a quando precisar encontrar algo específico.</p>
+<h3 id="c03-s1">Filtrar a lista</h3>
+<p>Você pode filtrar a lista por três coisas:</p>
+<table><thead><tr><th>Filtro</th><th>Para que serve</th></tr></thead><tbody><tr><td><strong>Buscar</strong></td><td>Procura na descrição ou na observação, sem diferenciar acento nem maiúscula.</td></tr><tr><td><strong>Estado</strong></td><td>Mostra os vencidos, os previstos ou os pagos.</td></tr><tr><td><strong>Conta</strong></td><td>Mostra uma conta específica, ou <strong>Sem conta</strong>, que reúne o que ainda não foi atribuído a nenhuma conta.</td></tr></tbody></table>
+<p>Com um filtro ligado, o número do topo deixa de ser o <strong>saldo previsto</strong> e passa a ser a <strong>soma do que está filtrado</strong>. Ao lado aparece a contagem, por exemplo "12 de 157 lançamentos". O saldo continua sendo o de tudo. A soma filtrada serve para conferir um recorte.</p>
+<h3 id="c03-s2">Criar um lançamento</h3>
+<p>Toque em <strong>+ Registrar</strong> e escolha um lançamento. Informe a descrição, o valor, a data e, se quiser, a conta. Você também pode informar a forma de pagamento. Se o lançamento for uma compra no cartão, veja o capítulo <strong>Contas e cartões</strong>.</p>
+<h3 id="c03-s3">Pagar ou dar baixa</h3>
+<p>Dar baixa é marcar que o lançamento aconteceu. Há dois jeitos:</p>
+<ul><li><strong>Pagou como previsto, hoje?</strong> Deslize a linha para o lado. O lançamento é baixado pelo valor previsto, na data de hoje.</li><li><strong>Pagou em outra data ou por outro valor?</strong> Abra o lançamento e toque em <strong>Registrar baixa</strong>.</li></ul>
+<p>Na tela de baixa, a data de pagamento já vem preenchida com hoje, e o valor pago já vem com o valor previsto. Ajuste o que for diferente, escolha a conta, se quiser, e confirme.</p>
+<p>Não existe um botão de "está pago". <strong>A data de pagamento é que marca o lançamento como pago.</strong> Por isso, se você cancelar a baixa, o lançamento volta a ser previsto.</p>
+<p><strong>O valor previsto não muda quando você paga diferente.</strong> Se a conta estava prevista em R$ 92,13 e você pagou R$ 94,83, o lançamento mostra essa diferença. Ela aparece na comparação entre <strong>Projeção</strong> e <strong>Executado</strong>, no capítulo <strong>Fluxo do período</strong>.</p>
+<h3 id="c03-s4">Dividir um lançamento em várias formas de pagamento</h3>
+<p>Às vezes uma despesa é paga de mais de uma forma. Por exemplo, parte no cartão e parte no PIX. Nesse caso, divida o lançamento:</p>
+<ul><li>Cada parte pode ter uma conta, um cartão ou ficar sem conta.</li><li>Um lançamento dividido tem de 2 a 12 partes.</li><li>Todas as partes têm a mesma data.</li><li>Ao criar, as partes precisam somar o total. A tela mostra quanto ainda falta e não deixa salvar enquanto a soma não fechar.</li><li>Ao editar, a tela mostra a diferença, mas não impede o salvamento.</li><li>Só despesas podem ser divididas.</li><li>Na lista, o lançamento dividido aparece como <strong>uma linha só</strong>, com o total. Toque nela para ver as partes.</li><li>Uma parte paga no cartão pode ser parcelada.</li></ul>
+<p>Para excluir uma parte, você escolhe entre <strong>só esta parte</strong> e <strong>o grupo todo</strong>. O grupo todo não pode ser excluído se alguma parte veio de uma nota fiscal ou de uma série. Nesse caso, exclua pela própria nota ou pela própria série.</p></section>
+<section><h2 id="c04">4. Séries e parcelamentos</h2><p>Uma série é um lançamento que se repete. Use séries para aluguel, mensalidades, contas de luz e parcelas.</p>
+<h3 id="c04-s1">Três tipos de série</h3>
+<table><thead><tr><th>Tipo</th><th>Exemplo</th><th>Como é o valor</th></tr></thead><tbody><tr><td><strong>Fixa</strong></td><td>aluguel, mensalidade</td><td>É o mesmo todo mês.</td></tr><tr><td><strong>Semi-fixa</strong></td><td>energia, água</td><td>Muda de mês para mês. O aplicativo estima o valor e marca com <strong>~</strong> até você registrar o valor real.</td></tr><tr><td><strong>Parcelamento</strong></td><td>12 parcelas de um seguro</td><td>Tem um número de parcelas definido.</td></tr></tbody></table>
+<h3 id="c04-s2">Registradas e ainda não registradas</h3>
+<p>Uma série tem dois tipos de ocorrência:</p>
+<ul><li><strong>Já registradas.</strong> Existem no aplicativo e você pode editá-las.</li><li><strong>Ainda não registradas.</strong> São previsões. Cada uma aparece no dia 1º do mês a que pertence, ou antes, se você quitá-la.</li></ul>
+<h3 id="c04-s3">Encerrar não é excluir</h3>
+<ul><li><strong>Encerrar</strong> para de criar ocorrências novas e mantém o histórico.</li><li><strong>Excluir</strong> apaga as ocorrências. Antes de confirmar, a tela mostra quantas serão apagadas.</li></ul>
+<p>Na dúvida, encerre. Assim o histórico continua disponível.</p>
+<h3 id="c04-s4">Parcelamento de compra no cartão</h3>
+<p>Se a compra foi parcelada no cartão, veja o capítulo <strong>Contas e cartões</strong>. Lá você encontra como informar o total e o número de parcelas.</p></section>
+<section><h2 id="c05">5. Contas e cartões</h2><h3 id="c05-s1">Contas</h3>
+<p>Uma conta é o lugar onde o dinheiro está: um banco, uma carteira, uma conta digital. Você dá o nome que quiser, como <em>BB</em>, <em>Nubank</em> ou <em>carteira</em>. O aplicativo não pede tipo nem lista de bancos.</p>
+<ul><li><strong>Conta é opcional.</strong> Todo lançamento pode existir sem conta.</li><li><strong>Arquivar</strong> tira a conta das listas de escolha, mas o histórico continua. Por isso não existe "excluir conta".</li><li><strong>Sem conta</strong> não é uma conta sua. É o lugar onde ficam os lançamentos que ainda não foram atribuídos. Ela não pode ser renomeada nem arquivada.</li><li>Uma conta que paga um cartão ativo não pode ser arquivada. Antes, troque a conta de pagamento do cartão.</li></ul>
+<h3 id="c05-s2">Cartões de crédito</h3>
+<p>Na tela de cartões você cadastra cada cartão com:</p>
+<ul><li><strong>Nome</strong>, que não pode repetir entre os cartões ativos;</li><li><strong>Bandeira</strong>, com cinco opções e a opção <strong>Outra</strong>;</li><li><strong>Limite</strong>, que deve ser zero ou mais;</li><li><strong>Dia do fechamento</strong>, de 1 a 31;</li><li><strong>Dia do vencimento</strong>, de 1 a 31;</li><li><strong>Conta de pagamento</strong>, obrigatória, que é de onde o dinheiro da fatura sai.</li></ul>
+<p>Você pode ter mais de um cartão na mesma conta. O aplicativo avisa, mas aceita.</p>
+<p>Mudar o dia de fechamento ou o de vencimento vale na hora. Nada que já foi lançado muda de valor, mas o período de cada fatura passa a ser calculado com a nova data.</p>
+<p>O aplicativo <strong>não guarda o número do cartão, o código de segurança nem a validade</strong>. Um cartão arquivado pode ser reativado. Não existe exclusão de cartão.</p>
+<h3 id="c05-s3">Ver fatura</h3>
+<p>Em cada cartão, toque em <strong>Ver fatura</strong>. A tela mostra duas partes.</p>
+<ul><li><strong>Compras no cartão.</strong> São as compras feitas com o cartão no ciclo da fatura, do dia seguinte ao fechamento anterior até o fechamento atual. Essa lista não mostra total.</li><li><strong>Lançamentos da conta.</strong> Fica recolhida. Ao abrir, mostra os lançamentos da conta de pagamento do cartão até o vencimento. Aqui aparece o valor da fatura, que você lança à mão quando ela chega.</li></ul>
+<p>Se a fatura não tem lançamentos, a tela oferece <strong>Novo lançamento</strong> com a conta já preenchida.</p>
+<p><strong>O aplicativo não calcula o total da fatura.</strong> Ele não mostra limite disponível nem débito automático. A fatura é o lançamento que você digita quando ela chega.</p>
+<h3 id="c05-s4">Compra no cartão</h3>
+<p>Ao registrar uma compra paga com cartão de crédito, escolha <strong>Pago com: Cartão</strong> e depois o cartão. Não é preciso escolher uma conta.</p>
+<ul><li><strong>A compra não tira dinheiro da conta agora.</strong> Ela aparece no fluxo na data da compra, mas não entra no saldo das contas.</li><li><strong>O dinheiro sai quando você lança a fatura</strong> na conta de pagamento do cartão.</li></ul>
+<p>Essa regra evita contar o mesmo dinheiro duas vezes: a compra conta na fatura, não no saldo do dia.</p>
+<p>Uma compra no cartão é sempre executada na data da compra. Não existe "pagar" para ela. Um lançamento que você já deu baixa só vira compra no cartão depois que a baixa for desfeita.</p>
+<h3 id="c05-s5">Compra parcelada no cartão</h3>
+<p>Escolha o total da compra e o número de parcelas, de 1 a 36. O aplicativo divide o total em centavos. Se houver sobra, ela entra na primeira parcela.</p>
+<p>Cada parcela cai na fatura correspondente. A primeira vai para a fatura da compra, e as seguintes, para as faturas dos meses seguintes.</p>
+<ul><li>Se você mudar o dia de fechamento, as parcelas já criadas <strong>não mudam de fatura</strong> sozinhas. A tela do cartão avisa quantas parcelas futuras podem mudar.</li><li>Se uma parcela já estiver numa fatura fechada, ela é mantida. Ao editar o total, o saldo restante é redistribuído pelas parcelas futuras.</li><li>Não é possível mudar a data nem o cartão de uma compra que já tem parcelas em fatura fechada.</li></ul>
+<h3 id="c05-s6">Estorno</h3>
+<p>Um estorno é uma compra com valor negativo. Registre-o como compra no cartão com o valor negativo. Ele aparece em <strong>Ver fatura</strong> e fica fora do saldo das contas. Estorno não pode ser parcelado.</p>
+<h3 id="c05-s7">Trocar a forma de um lançamento</h3>
+<p>Um lançamento avulso pode trocar de conta para cartão, ou o contrário. Nesse caso, o aplicativo apaga o lançamento e cria outro no lugar. Lançamentos ligados a uma nota fiscal ou a uma série não trocam de forma. A tela explica o motivo.</p></section>
+<section><h2 id="c06">6. Notas fiscais</h2><p>Notas fiscais são os comprovantes de compra. O aplicativo registra o valor, a data, o estabelecimento, a forma de pagamento e, quando possível, os produtos.</p>
+<h3 id="c06-s1">Como registrar uma nota</h3>
+<p>Abra <strong>Notas Fiscais &amp; QR Code</strong> no <strong>Mais</strong> e escolha como registrar:</p>
+<ul><li><strong>Ler QR Code.</strong> Aponte a câmera para o QR Code do cupom. Funciona só para <strong>NFC-e</strong>, que é o cupom de consumidor. A leitura é feita pelo aparelho, e o registro funciona sem internet.</li><li><strong>Digitar chave.</strong> Digite os 44 números da chave de acesso. Vale para <strong>NFC-e</strong> e para <strong>NF-e modelo 55</strong>, que é a nota completa, impressa como DANFE.</li></ul>
+<p>Ao informar a chave, o aplicativo preenche sozinho a UF, o emitente, o modelo, a série e o número. Esses campos não podem ser editados, porque vêm da própria chave.</p>
+<p>Se o dígito verificador da chave não confere, o aplicativo recusa a chave e diz o motivo. Se a nota já estiver registrada, ele mostra o que vai mudar antes de mudar.</p>
+<p>Depois de ler a nota, você informa a data, o valor e a forma de pagamento. Se o QR Code for de nota emitida em contingência, o valor e a data já vêm preenchidos.</p>
+<h3 id="c06-s2">Registrar uma nota atrás da outra</h3>
+<p>Quando você termina de registrar uma nota, a tela oferece <strong>Registrar outra nota</strong>. Ela volta pelo mesmo caminho: quem leu o QR Code volta à câmera, e quem digitou a chave volta ao formulário. Esse botão só aparece logo após um registro. Para conferir uma nota antiga, abra-a pela lista.</p>
+<h3 id="c06-s3">Formas de pagamento e o que cada uma faz</h3>
+<table><thead><tr><th>Forma</th><th>O que acontece</th></tr></thead><tbody><tr><td>Dinheiro, débito, PIX ou transferência</td><td>Vira uma despesa <strong>executada</strong> na data da compra.</td></tr><tr><td>Boleto</td><td>Vira uma despesa <strong>prevista</strong> no vencimento do boleto.</td></tr><tr><td>A prazo</td><td><strong>Não cria lançamento.</strong> Quem conta são as parcelas da série.</td></tr><tr><td>Cartão de crédito</td><td><strong>Não cria lançamento.</strong> A fatura do cartão é que conta a compra.</td></tr></tbody></table>
+<p>Uma nota a prazo abre a tela de série já preenchida com a descrição, o dia do vencimento e a conta. Você informa o número de parcelas e o valor de cada uma. A tela mostra a soma das parcelas ao lado do total da nota. Se as duas não baterem, o aplicativo avisa, mas não impede o salvamento.</p>
+<p>Se você sair antes de criar a série, a nota continua registrada. A tela dela mostra <strong>Registrar a série das parcelas</strong>. Quando a série existe, o botão some e a tela informa que ela já está registrada. Assim você não cria duas séries para a mesma compra.</p>
+<p>Uma nota pode ter de 1 a 12 pagamentos. Cada pagamento tem a própria forma. Se houver mais de um pagamento a prazo ou boleto, as séries são abertas uma depois da outra ao salvar, com o aviso <strong>Série do pagamento N de M</strong>. Se a nota for paga com cartão, cada pagamento escolhe o próprio cartão.</p>
+<h3 id="c06-s4">De qual conta saiu o dinheiro</h3>
+<p>Ao registrar, o aplicativo pergunta a conta. Ele não pergunta em dinheiro, porque dinheiro não sai de banco, nem em cartão de crédito, porque o cartão não mexe no saldo agora. A conta é opcional. Se você deixar em branco, o lançamento vai para <strong>Sem conta</strong>.</p>
+<p>A tela da nota sempre informa o efeito que ela teve no saldo, inclusive quando não teve nenhum. Uma nota de cartão de crédito, por exemplo, não mexe no saldo de hoje. Uma nota paga em débito aparece na Régua como qualquer despesa.</p>
+<h3 id="c06-s5">Produtos da nota</h3>
+<p>Na tela da nota, toque em <strong>Buscar no site da SEFAZ</strong> para tentar copiar a lista de produtos do site da Secretaria da Fazenda. Às vezes o site pede uma verificação. Nesse caso, você resolve a verificação e o aplicativo copia os produtos. Se não houver caminho automático, toque em <strong>Adicionar produtos à mão</strong>.</p>
+<p>Os produtos são <strong>detalhe</strong>. Eles nunca entram no saldo. O valor que vale é o total da nota. Se a soma dos produtos não bater com o total, por causa de desconto, frete ou tributo, o aplicativo avisa e não corrige nada.</p>
+<h3 id="c06-s6">Catálogo de itens</h3>
+<p>Cada produto pode ser cadastrado no catálogo. O catálogo é <strong>por fornecedor</strong>, e o fornecedor é o emitente da nota. Cada item tem:</p>
+<ul><li><strong>descrição</strong>, obrigatória;</li><li><strong>marca</strong>, opcional;</li><li><strong>código de barras</strong>, opcional;</li><li><strong>código do item</strong>, opcional. Ele precisa ser único dentro do mesmo fornecedor.</li></ul></section>
+<section><h2 id="c07">7. Pessoas, empréstimos e mesadas</h2><p>A tela <strong>Pessoas &amp; Livro-Razão</strong>, no <strong>Mais</strong>, guarda o que você emprestou e o que guarda para alguém.</p>
+<h3 id="c07-s1">Empréstimos</h3>
+<p>Use um empréstimo para registrar o dinheiro que você emprestou e espera receber de volta. O aplicativo acompanha a correção por juros. Taxa, regime e base de cálculo são escolhidos ao cadastrar o empréstimo.</p>
+<p>Para ver quanto alguém ainda deve hoje, abra a pessoa. O valor já vem corrigido até a data de hoje. Registre cada pagamento que essa pessoa fizer.</p>
+<p>O retorno previsto de um empréstimo só entra no fluxo se você decidir projetá-lo. Por padrão, ele não entra.</p>
+<h3 id="c07-s2">Valor guardado</h3>
+<p>Um valor guardado é dinheiro que está na sua conta, mas pertence a outra pessoa, como a mesada de um filho. Ele aparece separado do disponível. Assim você não conta com dinheiro que não é seu.</p>
+<h3 id="c07-s3">Mesadas</h3>
+<p>As mesadas têm tela própria, <strong>Mesadas &amp; Dependentes</strong>, no <strong>Mais</strong>. Você cadastra a mesada com o valor e o dia do crédito. O aplicativo cria o crédito automaticamente todo mês. Você também pode reajustar o valor ou encerrar a mesada. Encerrar não apaga o histórico.</p></section>
+<section><h2 id="c08">8. Fluxo do período</h2><p>A aba <strong>Fluxo</strong> responde quanto entra e quanto sai em um período.</p>
+<p>Ela tem quatro linhas, em duas colunas:</p>
+<ul><li><strong>Projeção</strong> é o que você espera: todo lançamento do período, pago ou não.</li><li><strong>Executado</strong> é o que de fato aconteceu: só os lançamentos pagos, pelo valor pago.</li></ul>
+<p>Use as setas para andar mês a mês. Os botões <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong> e <strong>12</strong> abrem o período para esse número de meses seguidos. O título mostra o período por extenso, como <em>agosto de 2026</em> ou <em>agosto a outubro de 2026</em>. Quando o período passa de um ano para outro, o título mostra os dois anos.</p>
+<p>Abaixo, o <strong>saldo por conta</strong> mostra quanto há em cada conta. Os lançamentos sem conta aparecem no fim, em destaque. Esse total é dinheiro seu que o aplicativo ainda não sabe em qual conta está. Ele não é escondido, para que a soma das contas não pareça errada.</p>
+<h3 id="c08-s1">Perguntas que o Fluxo responde</h3>
+<ul><li>Quanto entra e sai em três meses? Toque em <strong>3</strong>.</li><li>Quanto tenho no BB? Veja o saldo por conta.</li></ul></section>
+<section><h2 id="c09">9. Backup e restauração</h2><p>O backup é opcional. O aplicativo funciona completo sem ele.</p>
+<h3 id="c09-s1">Ligar o backup no Google Sheets</h3>
+<p>Ao conectar sua conta Google, o aplicativo cria uma planilha na sua conta. Ele só consegue acessar essa planilha. Não acessa outros arquivos, fotos, e-mails nem contatos.</p>
+<p>A cópia leva tudo: contas, lançamentos, séries, pessoas, empréstimos, mesadas, notas fiscais, a forma de pagamento de cada nota, os produtos já consultados e os cartões. A nota paga no cartão continua sem gerar lançamento na cópia, porque a fatura é que conta a compra.</p>
+<p>A barra no topo mostra o estado real da cópia: se há itens esperando envio, ou quando foi a última sincronização. A sincronização roda em segundo plano quando o Android permite. O aplicativo pede cerca de 15 minutos, mas o sistema pode adiar, e sem rede ela espera. Não há horário fixo. As alterações ficam guardadas no aparelho até serem enviadas.</p>
+<p>Para guardar uma cópia fora do aparelho, abra o <strong>Mais</strong>, na seção <strong>Segurança &amp; dados offline</strong>, e toque em <strong>Exportar Cópia de Segurança</strong>. O aplicativo gera um arquivo com a base do aparelho.</p>
+<h3 id="c09-s2">Restaurar a cópia</h3>
+<p>Use <strong>Restaurar de backup</strong> para trazer a cópia para este aparelho. Pode ser um aparelho novo ou o mesmo aparelho, em qualquer momento.</p>
+<ol><li>Conecte a sua conta Google.</li><li>Veja a <strong>prévia</strong>. Ela mostra a data do backup, o período coberto e a contagem de cada tipo de registro.</li><li>Confirme.</li></ol>
+<p>A prévia também avisa quando a cópia tem mais registros do que o aparelho tinha. Ela informa quantos registros de cada tipo vêm a mais e quantas duplicidades foram descartadas.</p>
+<p>A base atual só é trocada depois que a cópia é lida e conferida inteira. Se a restauração falhar, nada muda, e a mensagem diz isso.</p>
+<p>Se houver alterações neste aparelho que ainda não foram enviadas para a cópia, a prévia avisa e lista essas alterações. Você pode escolher <strong>Enviar agora e depois restaurar</strong>, que é o caminho recomendado, ou <strong>Restaurar mesmo assim</strong>. Nesse segundo caso, essas alterações se perdem.</p>
+<p>Uma cópia feita por uma versão anterior do aplicativo também pode ser restaurada. O que ela tem volta. O que ela não tem, por ser de uma versão anterior, não é tratado como erro.</p>
+<h3 id="c09-s3">Se a trava de tela mudar</h3>
+<p>Ao trocar ou remover o PIN ou a senha do aparelho, a chave que mantém a conexão com sua conta Google é apagada. <strong>Só a conexão se perde.</strong> Seus lançamentos continuam no aparelho. O aplicativo avisa e oferece reconectar.</p></section>
+<section><h2 id="c10">10. Privacidade</h2><h3 id="c10-s1">O que fica no aparelho</h3>
+<ul><li>Todos os seus registros ficam num banco de dados no aparelho. Só o Minha Contas acessa esse banco.</li><li>O aplicativo funciona sem internet e não exige conta.</li><li>O desenvolvedor não recebe nem guarda seus dados.</li></ul>
+<h3 id="c10-s2">O que sai do aparelho</h3>
+<p>O aplicativo só se conecta à internet nestas situações:</p>
+<ul><li><strong>Google Sheets.</strong> Somente se você conectar sua conta Google. Nesse caso, a cópia vai para a planilha na sua própria conta.</li><li><strong>BrasilAPI.</strong> Quando você registra uma nota com CNPJ do emitente e sem o nome do emitente. O aplicativo envia apenas o CNPJ, que é um dado público de empresa, para buscar o nome. Se a consulta falhar, a nota é salva sem o nome.</li><li><strong>Site da SEFAZ.</strong> Somente quando você toca em <strong>Buscar no site da SEFAZ</strong>. O site abre numa janela privada dentro do aplicativo, e o que ele gravar é descartado ao fechar. Se você tocar em <strong>Navegador</strong>, o endereço abre no navegador do seu aparelho, e aí valem as regras desse navegador.</li></ul>
+<p>Como em qualquer conexão, esses serviços conseguem ver o endereço IP do aparelho.</p>
+<h3 id="c10-s3">Desconectar e apagar os dados</h3>
+<p>Desconectar a conta Google não apaga a planilha. Ela continua na sua conta Google. Os dados do aparelho somem ao desinstalar o aplicativo ou ao limpar os dados dele nas configurações do Android. Se você quiser recuperá-los, restaure a planilha depois.</p>
+<h3 id="c10-s4">Permissões</h3>
+<ul><li><strong>Câmera.</strong> Serve só para ler o QR Code do cupom. O aplicativo não tira fotos e não envia imagem.</li><li><strong>Internet.</strong> Usada somente nas situações acima.</li><li><strong>Microfone e sobreposição de tela.</strong> O aplicativo não pede nem usa.</li></ul></section>
+<section><h2 id="c11">11. Perguntas frequentes</h2><h3 id="c11-s1">Preciso de conta para usar?</h3>
+<p>Não. O aplicativo funciona sem conta. A conta Google é só para o backup, e é opcional.</p>
+<h3 id="c11-s2">Posso usar sem internet?</h3>
+<p>Sim. Registrar lançamentos, ler a chave ou o QR Code e consultar a Régua e o Fluxo funcionam sem internet. Os produtos da nota só são buscados quando há conexão.</p>
+<h3 id="c11-s3">Uma nota no cartão aparece no meu saldo?</h3>
+<p>Não. A compra conta na fatura, e a fatura é o lançamento que você digita quando ela chega. Assim o mesmo dinheiro não aparece duas vezes.</p>
+<h3 id="c11-s4">Por que a nota diz "sem forma informada"?</h3>
+<p>Significa que a nota veio de uma cópia antiga, que não registrava como ela foi paga. Abra a nota e informe a forma de pagamento para ela entrar no fluxo.</p>
+<h3 id="c11-s5">Por que a soma das parcelas não bate com o total da nota?</h3>
+<p>O aplicativo avisa, mas não impede o salvamento. Confira os valores das parcelas e salve, ou ajuste a série.</p>
+<h3 id="c11-s6">Errei o valor de um lançamento pago. Como corrijo?</h3>
+<p>Abra o lançamento e toque em <strong>Alterar a baixa</strong>, ou edite a data e o valor pagos. Se você cancelar a baixa, o lançamento volta a ser previsto. O aplicativo sempre mostra o que vai mudar antes de confirmar.</p>
+<h3 id="c11-s7">Posso apagar uma conta?</h3>
+<p>Não. Arquive a conta. Ela sai das listas de escolha, e o histórico fica.</p>
+<h3 id="c11-s8">Posso apagar um cartão?</h3>
+<p>Não. Arquive o cartão. Ele pode ser reativado depois.</p>
+<h3 id="c11-s9">Por que o botão de série sumiu da nota?</h3>
+<p>Porque a série já foi criada. A tela da nota informa que ela está registrada. Assim você não cria duas séries para a mesma compra.</p>
+<h3 id="c11-s10">Mudei o dia de fechamento do cartão. As parcelas mudam de fatura?</h3>
+<p>As parcelas que já existem não mudam de fatura. A tela do cartão avisa quantas parcelas futuras podem mudar.</p></section>
+</main>
+</body>
+</html>
