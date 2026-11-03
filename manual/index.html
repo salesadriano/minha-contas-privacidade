@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha Contas</title>
+<style>
+  :root {
+    --paper0:#FBFAF8; --paper1:#FFFFFF; --paper2:#F2F0EC;
+    --ink1:#14181D; --ink2:#4A5460; --ink25:#646E7A;
+    --line1:#E3E0DA; --brand600:#0F5C55; --brand700:#0A4741;
+    --warn600:#9A5B08; --warn100:#FBEFD9; --neg600:#A32C24; --pos600:#15703C;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper0:#0E1114; --paper1:#161A1F; --paper2:#12161A;
+      --ink1:#EEF1F3; --ink2:#A9B3BD; --ink25:#8A939C;
+      --line1:#262C33; --brand600:#4FB3A5; --brand700:#9FD3CA;
+      --warn600:#E0A44A; --warn100:#33260F; --neg600:#F08379; --pos600:#5CC184;
+    }
+  }
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 2rem 1.25rem 6rem;
+  background: var(--paper0); color: var(--ink1);
+  font: 16px/1.65 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+main { max-width: 46rem; margin: 0 auto; }
+h1 { font-size: 2rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 .5rem; }
+h2 { font-size: 1.4rem; margin: 3rem 0 .75rem; padding-top: 1rem; border-top: 1px solid var(--line1); }
+h3 { font-size: 1.1rem; margin: 2rem 0 .5rem; color: var(--brand700); }
+h4 { font-size: 1rem; margin: 1.5rem 0 .5rem; }
+p { margin: 0 0 1rem; }
+strong { font-weight: 600; }
+code { font: .875em/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--paper2); padding: .1em .35em; border-radius: 4px; }
+ul, ol { margin: 0 0 1rem; padding-left: 1.25rem; }
+li { margin: .35rem 0; }
+table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: .95rem; }
+th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--line1); vertical-align: top; }
+th { font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink25); }
+hr { border: 0; border-top: 1px solid var(--line1); margin: 2.5rem 0; }
+aside { margin: 1.5rem 0; padding: 1rem 1.25rem; border-left: 3px solid var(--brand600); background: var(--paper2); border-radius: 0 8px 8px 0; }
+aside.atencao { border-left-color: var(--warn600); background: var(--warn100); }
+aside p { margin: 0; }
+nav.indice ol { list-style: none; padding: 0; }
+nav.indice a, .idiomas a { color: var(--brand700); }
+.idiomas { margin: 0 0 1.5rem; font-size: .9rem; color: var(--ink25); }
+.idiomas a + a::before { content: " · "; color: var(--ink25); }
+ main { text-align: center; } ul { list-style: none; padding: 0; font-size: 1.2rem; }</style>
+</head>
+<body>
+<main>
+<h1>Minha Contas</h1>
+<p>Escolha o idioma · Choose your language · Elija el idioma</p>
+<ul><li><a href="pt/" hreflang="pt">Português</a></li><li><a href="en/" hreflang="en">English</a></li><li><a href="es/" hreflang="es">Español</a></li></ul>
+</main>
+<script>
+  var l = (navigator.language || 'pt').slice(0, 2);
+  if (l === 'en' || l === 'es') location.replace(l + '/');
+  else if (l === 'pt') location.replace('pt/');
+</script>
+</body>
+</html>
