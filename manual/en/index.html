@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha Contas</title>
+<style>
+  :root {
+    --paper0:#FBFAF8; --paper1:#FFFFFF; --paper2:#F2F0EC;
+    --ink1:#14181D; --ink2:#4A5460; --ink25:#646E7A;
+    --line1:#E3E0DA; --brand600:#0F5C55; --brand700:#0A4741;
+    --warn600:#9A5B08; --warn100:#FBEFD9; --neg600:#A32C24; --pos600:#15703C;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper0:#0E1114; --paper1:#161A1F; --paper2:#12161A;
+      --ink1:#EEF1F3; --ink2:#A9B3BD; --ink25:#8A939C;
+      --line1:#262C33; --brand600:#4FB3A5; --brand700:#9FD3CA;
+      --warn600:#E0A44A; --warn100:#33260F; --neg600:#F08379; --pos600:#5CC184;
+    }
+  }
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 2rem 1.25rem 6rem;
+  background: var(--paper0); color: var(--ink1);
+  font: 16px/1.65 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+main { max-width: 46rem; margin: 0 auto; }
+h1 { font-size: 2rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 .5rem; }
+h2 { font-size: 1.4rem; margin: 3rem 0 .75rem; padding-top: 1rem; border-top: 1px solid var(--line1); }
+h3 { font-size: 1.1rem; margin: 2rem 0 .5rem; color: var(--brand700); }
+h4 { font-size: 1rem; margin: 1.5rem 0 .5rem; }
+p { margin: 0 0 1rem; }
+strong { font-weight: 600; }
+code { font: .875em/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--paper2); padding: .1em .35em; border-radius: 4px; }
+ul, ol { margin: 0 0 1rem; padding-left: 1.25rem; }
+li { margin: .35rem 0; }
+table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: .95rem; }
+th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--line1); vertical-align: top; }
+th { font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink25); }
+hr { border: 0; border-top: 1px solid var(--line1); margin: 2.5rem 0; }
+aside { margin: 1.5rem 0; padding: 1rem 1.25rem; border-left: 3px solid var(--brand600); background: var(--paper2); border-radius: 0 8px 8px 0; }
+aside.atencao { border-left-color: var(--warn600); background: var(--warn100); }
+aside p { margin: 0; }
+nav.indice ol { list-style: none; padding: 0; }
+nav.indice a, .idiomas a { color: var(--brand700); }
+.idiomas { margin: 0 0 1.5rem; font-size: .9rem; color: var(--ink25); }
+.idiomas a + a::before { content: " · "; color: var(--ink25); }
+</style>
+</head>
+<body>
+<main>
+<p class="idiomas">Language: <a href="../pt/" hreflang="pt">Português</a><strong>English</strong><a href="../es/" hreflang="es">Español</a></p>
+<h1>Minha Contas</h1>
+<nav class="indice" aria-label="Contents"><h2>Contents</h2><ol><li><a href="#c01">1. Getting started</a></li><li><a href="#c02">2. The Timeline and the question "will I make it to the end of the month?"</a></li><li><a href="#c03">3. Transactions</a></li><li><a href="#c04">4. Recurring series and installment plans</a></li><li><a href="#c05">5. Accounts and cards</a></li><li><a href="#c06">6. Receipts</a></li><li><a href="#c07">7. People, loans and allowances</a></li><li><a href="#c08">8. Cash flow for the period</a></li><li><a href="#c09">9. Backup and restore</a></li><li><a href="#c10">10. Privacy</a></li><li><a href="#c11">11. Frequently asked questions</a></li></ol></nav>
+<section><h2 id="c01">1. Getting started</h2><p>Minha Contas is a personal finance app that works entirely offline and without an account. It was built to answer one question: <strong>will I make it to the end of the month?</strong> This manual explains how to use each part of it, in the order you are most likely to need them.</p>
+<p>The first time you open Minha Contas, it offers two options:</p>
+<ul><li><strong>Start from scratch.</strong> You add your accounts and your transactions little by little.</li><li><strong>Restore from backup.</strong> You bring to this device the copy you already saved in Google Sheets. See the chapter <strong>Backup and restore</strong>.</li></ul>
+<p>You can change the language at any time with the globe icon (🌐) in the top bar. The app is available in Portuguese, English and Spanish. On first launch it uses your device's language if it is one of these three. If it is not, it uses Portuguese. The choice you make with 🌐 is saved.</p>
+<p>The manual is also inside the app. Tap the <strong>?</strong> in the top bar, to the left of 🌐, on any screen with a header. It opens the index of chapters. At the end of each chapter there are <strong>previous</strong> and <strong>next</strong> links. The back arrow returns you to the index and then to the screen you came from. The manual opens in the language you are using and works without internet.</p>
+<h3 id="c01-s1">How the app is organized</h3>
+<ul><li><strong>Home.</strong> This is the home screen. It shows today's consolidated balance, what is expected in the coming days, and a summary of the month's cash flow.</li><li><strong>Timeline.</strong> Shows the balance line by line.</li><li><strong>Cash flow.</strong> Shows how much comes in and goes out in a period.</li><li><strong>Transactions.</strong> The list of everything you have recorded, with filters.</li><li><strong>More.</strong> Opens the other screens: <strong>Recurring Series</strong>, for what repeats, such as rent and installments; <strong>People &amp; Ledger</strong>, for loans and funds held for someone; <strong>Allowances &amp; Dependents</strong>; <strong>Receipts &amp; QR Code</strong>, for your purchase receipts; <strong>Credit Cards</strong>; and <strong>Bank Accounts</strong>, for your accounts, wallets and banks.</li></ul>
+<p>To record something new, tap <strong>+ Add</strong>. This button is always within thumb's reach.</p></section>
+<section><h2 id="c02">2. The Timeline and the question "will I make it to the end of the month?"</h2><p>The Timeline is a vertical timeline. Each transaction appears in date order and shows <strong>the balance after it</strong>. This way you can see, without adding anything up, whether the money lasts until the end of the month.</p>
+<p>The Timeline opens on the present. The past appears above, and the future below. A band with the word <strong>TODAY</strong> marks where you are. When you scroll, the TODAY band stays stuck to the top.</p>
+<p>To go back to the present after scrolling into the past, tap the <strong>Today</strong> pill.</p>
+<h3 id="c02-s1">What the symbols mean</h3>
+<ul><li><strong>✓</strong> marks a paid transaction.</li><li><strong>!</strong> marks a transaction that is overdue and has not been paid.</li><li><strong>~</strong> marks an estimated amount, which may still change.</li><li>A struck-through line marks a past that is already settled.</li><li>A line in full color marks a future you can still edit.</li></ul>
+<h3 id="c02-s2">When the balance goes negative</h3>
+<p>If the projected balance goes from positive to negative at some point, the Timeline marks exactly where that happens. If no mark appears, the balance does not go negative within the horizon you are looking at.</p>
+<h3 id="c02-s3">Edit a transaction from the Timeline</h3>
+<p>Tap a line to open the transaction and edit it.</p></section>
+<section><h2 id="c03">3. Transactions</h2><p>The <strong>Transactions</strong> tab is the full list. Use it when you need to find something specific.</p>
+<h3 id="c03-s1">Filter the list</h3>
+<p>You can filter the list by three things:</p>
+<table><thead><tr><th>Filter</th><th>What it is for</th></tr></thead><tbody><tr><td><strong>Search</strong></td><td>Searches the description or note, ignoring accents and capital letters.</td></tr><tr><td><strong>Status</strong></td><td>Shows the overdue, the expected, or the paid ones.</td></tr><tr><td><strong>Account</strong></td><td>Shows a specific account, or <strong>No account</strong>, which groups what has not yet been assigned to any account.</td></tr></tbody></table>
+<p>When a filter is on, the number at the top stops being the <strong>projected balance</strong> and becomes the <strong>sum of what is filtered</strong>. Next to it you see the count, for example "12 of 157 transactions". The balance is still the balance of everything. The filtered sum is there to check a slice.</p>
+<h3 id="c03-s2">Create a transaction</h3>
+<p>Tap <strong>+ Add</strong> and choose a transaction. Enter the description, the amount, the date and, if you want, the account. You can also enter the payment method. If the transaction is a card purchase, see the chapter <strong>Accounts and cards</strong>.</p>
+<h3 id="c03-s3">Pay or mark as paid</h3>
+<p>Marking as paid means recording that the transaction happened. There are two ways to do it:</p>
+<ul><li><strong>Paid as expected, today?</strong> Swipe the row sideways. The transaction is marked as paid for the expected amount, on today's date.</li><li><strong>Paid on another date or for another amount?</strong> Open the transaction and tap <strong>Mark as paid</strong>.</li></ul>
+<p>On the payment screen, the payment date is already filled in with today, and the amount paid is already filled in with the expected amount. Adjust whatever is different, choose the account if you want, and confirm.</p>
+<p>There is no "is paid" button. <strong>The payment date is what marks the transaction as paid.</strong> So if you undo the payment, the transaction goes back to being expected.</p>
+<p><strong>The expected amount does not change when you pay a different amount.</strong> If the bill was expected at R$92.13 and you paid R$94.83, the transaction shows that difference. It appears in the comparison between <strong>Projected</strong> and <strong>Actual</strong>, in the chapter <strong>Cash flow for the period</strong>.</p>
+<h3 id="c03-s4">Split a transaction across several payment methods</h3>
+<p>Sometimes an expense is paid in more than one way. For example, part on the card and part by Pix. In that case, split the transaction:</p>
+<ul><li>Each part can have an account, a card, or no account.</li><li>A split transaction has from 2 to 12 parts.</li><li>All parts have the same date.</li><li>When you create it, the parts must add up to the total. The screen shows how much is still missing and does not let you save until the sum matches.</li><li>When you edit it, the screen shows the difference but does not prevent saving.</li><li>Only expenses can be split.</li><li>In the list, a split transaction appears as <strong>a single row</strong>, with the total. Tap it to see the parts.</li><li>A part paid by card can be paid in installments.</li></ul>
+<p>To delete a part, you choose between <strong>only this part</strong> and <strong>the whole group</strong>. The whole group cannot be deleted if any part came from a receipt or from a series. In that case, delete it from the receipt or the series itself.</p></section>
+<section><h2 id="c04">4. Recurring series and installment plans</h2><p>A series is a transaction that repeats. Use series for rent, memberships, electricity bills and installments.</p>
+<h3 id="c04-s1">Three types of series</h3>
+<table><thead><tr><th>Type</th><th>Example</th><th>How the amount works</th></tr></thead><tbody><tr><td><strong>Fixed</strong></td><td>rent, membership</td><td>It is the same every month.</td></tr><tr><td><strong>Semi-fixed</strong></td><td>electricity, water</td><td>Changes from month to month. The app estimates the amount and marks it with <strong>~</strong> until you record the actual amount.</td></tr><tr><td><strong>Installment plan</strong></td><td>12 installments of an insurance policy</td><td>Has a set number of installments.</td></tr></tbody></table>
+<h3 id="c04-s2">Recorded and not yet recorded</h3>
+<p>A series has two kinds of occurrences:</p>
+<ul><li><strong>Already recorded.</strong> They exist in the app and you can edit them.</li><li><strong>Not yet recorded.</strong> These are forecasts. Each one appears on the 1st of the month it belongs to, or earlier, if you pay it off.</li></ul>
+<h3 id="c04-s3">Ending is not deleting</h3>
+<ul><li><strong>End</strong> stops creating new occurrences and keeps the history.</li><li><strong>Delete</strong> erases the occurrences. Before you confirm, the screen shows how many will be erased.</li></ul>
+<p>When in doubt, end it. That way the history remains available.</p>
+<h3 id="c04-s4">Card purchase in installments</h3>
+<p>If the purchase was made in installments on the card, see the chapter <strong>Accounts and cards</strong>. There you will find how to enter the total and the number of installments.</p></section>
+<section><h2 id="c05">5. Accounts and cards</h2><h3 id="c05-s1">Accounts</h3>
+<p>An account is where the money is: a bank, a wallet, a digital account. You give it any name you like, such as <em>BB</em>, <em>Nubank</em> or <em>wallet</em>. The app does not ask for a type or a list of banks.</p>
+<ul><li><strong>An account is optional.</strong> Every transaction can exist without an account.</li><li><strong>Archive</strong> removes the account from the selection lists, but the history stays. That is why there is no "delete account".</li><li><strong>No account</strong> is not one of your accounts. It is where transactions that have not yet been assigned go. It cannot be renamed or archived.</li><li>An account that pays an active card cannot be archived. First, change the card's payment account.</li></ul>
+<h3 id="c05-s2">Credit cards</h3>
+<p>On the cards screen you add each card with:</p>
+<ul><li><strong>Name</strong>, which cannot repeat among active cards;</li><li><strong>Brand</strong>, with five options and the option <strong>Other</strong>;</li><li><strong>Limit</strong>, which must be zero or more;</li><li><strong>Closing day</strong>, from 1 to 31;</li><li><strong>Due day</strong>, from 1 to 31;</li><li><strong>Payment account</strong>, required, which is where the money for the statement comes from.</li></ul>
+<p>You can have more than one card on the same account. The app warns you, but accepts it.</p>
+<p>Changing the closing day or the due day takes effect right away. Nothing already recorded changes its amount, but the period of each statement is now calculated using the new date.</p>
+<p>The app <strong>does not store the card number, the security code or the expiry date</strong>. An archived card can be reactivated. There is no card deletion.</p>
+<h3 id="c05-s3">View statement</h3>
+<p>On each card, tap <strong>View statement</strong>. The screen shows two parts.</p>
+<ul><li><strong>Card purchases.</strong> These are the purchases made with the card in the statement cycle, from the day after the previous closing up to the current closing. This list does not show a total.</li><li><strong>Account transactions.</strong> This section is collapsed. When you open it, it shows the transactions of the card's payment account up to the due date. This is where the statement amount appears, which you enter by hand when it arrives.</li></ul>
+<p>If the statement has no transactions, the screen offers <strong>New transaction</strong> with the account already filled in.</p>
+<p><strong>The app does not calculate the statement total.</strong> It does not show available limit or automatic debit. The statement is the transaction you type in when it arrives.</p>
+<h3 id="c05-s4">Card purchase</h3>
+<p>When you record a purchase paid with a credit card, choose <strong>Paid with: Credit card</strong> and then the card. You do not need to choose an account.</p>
+<ul><li><strong>The purchase does not take money out of the account now.</strong> It appears in the cash flow on the purchase date, but it does not enter the account balances.</li><li><strong>The money leaves when you enter the statement</strong> in the card's payment account.</li></ul>
+<p>This rule avoids counting the same money twice: the purchase counts on the statement, not on the balance of the day.</p>
+<p>A card purchase always happens on the purchase date. There is no "pay" for it. A transaction you have already marked as paid only becomes a card purchase after the payment is undone.</p>
+<h3 id="c05-s5">Installment card purchase</h3>
+<p>Choose the total of the purchase and the number of installments, from 1 to 36. The app splits the total into cents. If there is a remainder, it goes into the first installment.</p>
+<p>Each installment falls on the matching statement. The first goes to the statement of the purchase, and the following ones to the statements of the following months.</p>
+<ul><li>If you change the closing day, the installments already created <strong>do not move to another statement</strong> on their own. The card screen warns you how many future installments may change.</li><li>If an installment is already on a closed statement, it is kept. When you edit the total, the remaining balance is redistributed across the future installments.</li><li>You cannot change the date or the card of a purchase that already has installments on a closed statement.</li></ul>
+<h3 id="c05-s6">Refund</h3>
+<p>A refund is a purchase with a negative amount. Record it as a card purchase with the negative amount. It appears in <strong>View statement</strong> and stays out of the account balances. A refund cannot be made in installments.</p>
+<h3 id="c05-s7">Change the form of a transaction</h3>
+<p>A standalone transaction can switch from an account to a card, or the other way around. In that case, the app deletes the transaction and creates a new one in its place. Transactions linked to a receipt or a series cannot change their form. The screen explains why.</p></section>
+<section><h2 id="c06">6. Receipts</h2><p>Receipts are proof of purchase. The app records the amount, the date, the merchant, the payment method and, when possible, the products.</p>
+<h3 id="c06-s1">How to record a receipt</h3>
+<p>Open <strong>Receipts &amp; QR Code</strong> in the <strong>More</strong> tab and choose how to record it:</p>
+<ul><li><strong>Scan QR Code.</strong> Point the camera at the QR Code on the receipt. It only works for <strong>NFC-e</strong>, which is the consumer receipt. The reading is done by the device, and recording works without internet.</li><li><strong>Type key.</strong> Type the 44 digits of the access key. This works for <strong>NFC-e</strong> and for <strong>NF-e model 55</strong>, which is the full invoice, printed as a DANFE.</li></ul>
+<p>When you enter the key, the app fills in the state (UF), the issuer, the model, the series and the number by itself. These fields cannot be edited, because they come from the key itself.</p>
+<p>If the check digit of the key does not match, the app rejects the key and tells you why. If the receipt is already recorded, the app shows what will change before changing it.</p>
+<p>After reading the receipt, you enter the date, the amount and the payment method. If the QR Code is for a receipt issued in contingency mode, the amount and the date are already filled in.</p>
+<h3 id="c06-s2">Record one receipt after another</h3>
+<p>When you finish recording a receipt, the screen offers <strong>Add another receipt</strong>. It goes back the same way: if you scanned the QR Code, you go back to the camera, and if you typed the key, you go back to the form. This button only appears right after a recording. To check an older receipt, open it from the list.</p>
+<h3 id="c06-s3">Payment methods and what each one does</h3>
+<table><thead><tr><th>Method</th><th>What happens</th></tr></thead><tbody><tr><td>Cash, debit, Pix or transfer</td><td>Becomes an <strong>actual</strong> expense on the purchase date.</td></tr><tr><td>Boleto</td><td>Becomes an <strong>expected</strong> expense on the boleto's due date.</td></tr><tr><td>Installments</td><td><strong>Does not create a transaction.</strong> The installments of the series are what count.</td></tr><tr><td>Credit card</td><td><strong>Does not create a transaction.</strong> The card statement is what counts the purchase.</td></tr></tbody></table>
+<p>A receipt paid in installments opens the series screen already filled in with the description, the due day and the account. You enter the number of installments and the amount of each one. The screen shows the sum of the installments next to the receipt total. If the two do not match, the app warns you, but does not prevent saving.</p>
+<p>If you leave before creating the series, the receipt stays recorded. Its screen shows <strong>Record the installment series</strong>. Once the series exists, the button disappears and the screen says it is already recorded. This way you do not create two series for the same purchase.</p>
+<p>A receipt can have from 1 to 12 payments. Each payment has its own method. If there is more than one installment or boleto payment, the series are opened one after another when you save, with the notice <strong>Series for payment N of M</strong>. If the receipt is paid by card, each payment chooses its own card.</p>
+<h3 id="c06-s4">Which account the money came from</h3>
+<p>When you record, the app asks for the account. It does not ask for cash, because cash does not leave a bank, nor for a credit card, because the card does not affect the balance now. The account is optional. If you leave it blank, the transaction goes to <strong>No account</strong>.</p>
+<p>The receipt screen always shows the effect it had on the balance, including when it had none. A credit card receipt, for example, does not change today's balance. A receipt paid by debit appears on the Timeline like any other expense.</p>
+<h3 id="c06-s5">Receipt products</h3>
+<p>On the receipt screen, tap <strong>Search the SEFAZ website</strong> to try to copy the list of products from the website of the state tax authority (Secretaria da Fazenda). Sometimes the website asks for a verification. In that case, complete the verification and the app copies the products. If there is no automatic way, tap <strong>Add products by hand</strong>.</p>
+<p>Products are <strong>detail</strong>. They never enter the balance. The amount that counts is the receipt total. If the sum of the products does not match the total, because of a discount, freight or tax, the app warns you and does not correct anything.</p>
+<h3 id="c06-s6">Item catalog</h3>
+<p>Each product can be added to the catalog. The catalog is <strong>per merchant</strong>, and the merchant is the issuer of the receipt. Each item has:</p>
+<ul><li><strong>description</strong>, required;</li><li><strong>brand</strong>, optional;</li><li><strong>barcode</strong>, optional;</li><li><strong>item code</strong>, optional. It must be unique within the same merchant.</li></ul></section>
+<section><h2 id="c07">7. People, loans and allowances</h2><p>The <strong>People &amp; Ledger</strong> screen, under <strong>More</strong>, keeps track of what you have lent and what you hold for someone.</p>
+<h3 id="c07-s1">Loans</h3>
+<p>Use a loan to record money you lent and expect to get back. The app tracks the correction by interest. Rate, method and calculation basis are chosen when you add the loan.</p>
+<p>To see how much someone still owes you today, open the person. The amount already comes adjusted up to today's date. Record each payment that person makes.</p>
+<p>The expected return on a loan only enters the cash flow if you decide to project it. By default, it does not enter.</p>
+<h3 id="c07-s2">Held funds</h3>
+<p>A held fund is money that is in your account but belongs to someone else, such as a child's allowance. It appears separately from the available balance. This way you do not count on money that is not yours.</p>
+<h3 id="c07-s3">Allowances</h3>
+<p>Allowances have their own screen, <strong>Allowances &amp; Dependents</strong>, under <strong>More</strong>. You add the allowance with the amount and the day of the credit. The app creates the credit automatically every month. You can also adjust the amount or end the allowance. Ending does not erase the history.</p></section>
+<section><h2 id="c08">8. Cash flow for the period</h2><p>The <strong>Cash flow</strong> tab answers how much comes in and how much goes out in a period.</p>
+<p>It has four rows, in two columns:</p>
+<ul><li><strong>Projected</strong> is what you expect: every transaction in the period, paid or not.</li><li><strong>Actual</strong> is what really happened: only the paid transactions, for the amount paid.</li></ul>
+<p>Use the arrows to move from month to month. The buttons <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>6</strong> and <strong>12</strong> open the period for that number of months in a row. The title shows the period in full, such as <em>August 2026</em> or <em>August to October 2026</em>. When the period crosses from one year to the next, the title shows both years.</p>
+<p>Below, the <strong>account balances</strong> show how much is in each account. Transactions without an account appear at the end, highlighted. This total is your money that the app does not yet know which account it is in. It is not hidden, so that the sum of the accounts does not look wrong.</p>
+<h3 id="c08-s1">Questions Cash flow answers</h3>
+<ul><li>How much comes in and goes out over three months? Tap <strong>3</strong>.</li><li>How much do I have at BB? Look at the balance by account.</li></ul></section>
+<section><h2 id="c09">9. Backup and restore</h2><p>The backup is optional. The app works fully without it.</p>
+<h3 id="c09-s1">Turn on the backup in Google Sheets</h3>
+<p>When you connect your Google account, the app creates a spreadsheet in your account. It can only access that spreadsheet. It does not access other files, photos, emails or contacts.</p>
+<p>The copy includes everything: accounts, transactions, series, people, loans, allowances, receipts, the payment method of each receipt, the products already looked up, and the cards. A receipt paid by card still does not generate a transaction in the copy, because the statement is what counts the purchase.</p>
+<p>The bar at the top shows the actual state of the copy: whether there are items waiting to be sent, or when the last sync happened. Sync runs in the background when Android allows it. The app asks for about 15 minutes, but the system may postpone it, and without a network it waits. There is no fixed time. Changes stay saved on the device until they are sent.</p>
+<p>To keep a copy outside the device, open <strong>More</strong>, in the <strong>Security &amp; offline data</strong> section, and tap <strong>Export Backup</strong>. The app generates a file with the device's database.</p>
+<h3 id="c09-s2">Restore the copy</h3>
+<p>Use <strong>Restore from backup</strong> to bring the copy to this device. It can be a new device or the same device, at any time.</p>
+<ol><li>Connect your Google account.</li><li>Check the <strong>preview</strong>. It shows the date of the backup, the period it covers and the count of each type of record.</li><li>Confirm.</li></ol>
+<p>The preview also warns you when the copy has more records than the device had. It tells you how many records of each type are extra and how many duplicates were discarded.</p>
+<p>The current database is only replaced after the copy has been read and checked in full. If the restore fails, nothing changes, and the message says so.</p>
+<p>If there are changes on this device that have not yet been sent to the copy, the preview warns you and lists those changes. You can choose <strong>Send now, then restore</strong>, which is the recommended path, or <strong>Restore anyway</strong>. In that second case, those changes are lost.</p>
+<p>A copy made by a previous version of the app can also be restored. What it has comes back. What it does not have, because it comes from a previous version, is not treated as an error.</p>
+<h3 id="c09-s3">If the screen lock changes</h3>
+<p>When you change or remove the PIN or password of the device, the key that keeps the connection to your Google account is erased. <strong>Only the connection is lost.</strong> Your transactions stay on the device. The app warns you and offers to reconnect.</p></section>
+<section><h2 id="c10">10. Privacy</h2><h3 id="c10-s1">What stays on the device</h3>
+<ul><li>All your records are kept in a database on the device. Only Minha Contas accesses that database.</li><li>The app works without internet and does not require an account.</li><li>The developer does not receive or store your data.</li></ul>
+<h3 id="c10-s2">What leaves the device</h3>
+<p>The app only connects to the internet in these situations:</p>
+<ul><li><strong>Google Sheets.</strong> Only if you connect your Google account. In that case, the copy goes to the spreadsheet in your own account.</li><li><strong>BrasilAPI.</strong> When you record a receipt with the issuer's CNPJ and without the issuer's name. The app sends only the CNPJ, which is public company data, to look up the name. If the lookup fails, the receipt is saved without the name.</li><li><strong>SEFAZ website.</strong> Only when you tap <strong>Search the SEFAZ website</strong>. The site opens in a private window inside the app, and anything it stores is discarded when you close it. If you tap <strong>Browser</strong>, the address opens in your device's browser, and then that browser's rules apply.</li></ul>
+<p>As with any connection, these services can see the device's IP address.</p>
+<h3 id="c10-s3">Disconnect and erase the data</h3>
+<p>Disconnecting your Google account does not delete the spreadsheet. It stays in your Google account. The device's data disappears when you uninstall the app or clear its data in the Android settings. If you want to recover it, restore from the spreadsheet afterwards.</p>
+<h3 id="c10-s4">Permissions</h3>
+<ul><li><strong>Camera.</strong> Used only to read the QR Code on the receipt. The app does not take photos and does not send images.</li><li><strong>Internet.</strong> Used only in the situations above.</li><li><strong>Microphone and screen overlay.</strong> The app does not request or use them.</li></ul></section>
+<section><h2 id="c11">11. Frequently asked questions</h2><h3 id="c11-s1">Do I need an account to use it?</h3>
+<p>No. The app works without an account. The Google account is only for the backup, and it is optional.</p>
+<h3 id="c11-s2">Can I use it without internet?</h3>
+<p>Yes. Recording transactions, reading the key or the QR Code, and checking the Timeline and Cash flow all work without internet. Receipt products are only looked up when there is a connection.</p>
+<h3 id="c11-s3">Does a card receipt show up in my balance?</h3>
+<p>No. The purchase counts on the statement, and the statement is the transaction you type in when it arrives. That way the same money does not appear twice.</p>
+<h3 id="c11-s4">Why does the receipt say "no payment method"?</h3>
+<p>It means the receipt came from an old copy, which did not record how it was paid. Open the receipt and enter the payment method so it enters the cash flow.</p>
+<h3 id="c11-s5">Why doesn't the sum of the installments match the receipt total?</h3>
+<p>The app warns you, but does not prevent saving. Check the installment amounts and save, or adjust the series.</p>
+<h3 id="c11-s6">I entered the wrong amount for a paid transaction. How do I fix it?</h3>
+<p>Open the transaction and tap <strong>Edit payment details</strong>, or edit the paid date and amount. If you undo the payment, the transaction goes back to being expected. The app always shows what will change before you confirm.</p>
+<h3 id="c11-s7">Can I delete an account?</h3>
+<p>No. Archive the account. It leaves the selection lists, and the history stays.</p>
+<h3 id="c11-s8">Can I delete a card?</h3>
+<p>No. Archive the card. It can be reactivated later.</p>
+<h3 id="c11-s9">Why did the series button disappear from the receipt?</h3>
+<p>Because the series has already been created. The receipt screen says it is recorded. This way you do not create two series for the same purchase.</p>
+<h3 id="c11-s10">I changed the card's closing day. Do the installments move to another statement?</h3>
+<p>The installments that already exist do not move to another statement. The card screen warns you how many future installments may change.</p></section>
+</main>
+</body>
+</html>
